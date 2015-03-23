@@ -6,6 +6,6 @@ def test_json(json_schema_file, validator):
     assert v.schema == validator.schema
 
 
-def test_jsons(json_schema_string, validator):
+def test_jsons(json_schema_file, json_schema_string, validator):
     v = validator_from_jsons(json_schema_string)
     assert v.schema == validator.schema

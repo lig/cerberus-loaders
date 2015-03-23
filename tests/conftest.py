@@ -122,7 +122,7 @@ def json_schema_filename():
         Path(__file__).parent.joinpath('fixtures', 'schema.json').absolute())
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def json_schema_file(json_schema_filename):
     return open(json_schema_filename)
 
