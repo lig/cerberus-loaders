@@ -1,4 +1,4 @@
-from .json import validator_from_json, validator_from_jsons
+from .json import validator_from_json
 try:
     import yaml as _yaml
 except ImportError:

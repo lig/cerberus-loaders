@@ -1,4 +1,4 @@
-from cerberus_loaders.json import validator_from_json, validator_from_jsons
+from cerberus_loaders.json import validator_from_json
 
 
 def test_json(json_schema_file, validator):
@@ -7,5 +7,5 @@ def test_json(json_schema_file, validator):
 
 
 def test_jsons(json_schema_string, validator):
-    v = validator_from_jsons(json_schema_string)
+    v = validator_from_json(json_schema_string)
     assert v.schema == validator.schema
