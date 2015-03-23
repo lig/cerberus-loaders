@@ -3,7 +3,7 @@ Loaders to load [Cerberus](https://github.com/nicolaiarocci/cerberus) Validators
 
 ## Formats support
  * JSON
- * YaML (planned)
+ * YaML
  * Python classes (planned)
 
 ## Usage
