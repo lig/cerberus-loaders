@@ -1,0 +1,54 @@
+a_boolean: {type: boolean}
+a_datetime: {type: datetime}
+a_dict:
+  schema:
+    address: {type: string}
+    city: {required: true, type: string}
+  type: dict
+a_dict_with_keyschema:
+  keyschema: {type: integer}
+  type: dict
+a_float: {max: 100, min: 1, type: float}
+a_list_length:
+  maxlength: 5
+  minlength: 2
+  schema: {type: integer}
+  type: list
+a_list_of_dicts:
+  schema:
+    schema:
+      price: {type: integer}
+      sku: {type: string}
+    type: dict
+  type: list
+a_list_of_dicts_deprecated:
+  items:
+    price: {type: integer}
+    sku: {type: string}
+  type: list
+a_list_of_integers:
+  schema: {type: integer}
+  type: list
+a_list_of_values:
+  items:
+  - {type: string}
+  - {type: integer}
+  type: list
+a_not_nullable_field_without_type: {}
+a_nullable_field_without_type: {nullable: true}
+a_nullable_integer: {nullable: true, type: integer}
+a_number: {max: 100, min: 1, type: number}
+a_readonly_string: {readonly: true, type: string}
+a_regex_email: {regex: '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', type: string}
+a_required_string: {maxlength: 10, minlength: 2, required: true, type: string}
+a_restricted_integer:
+  allowed: [-1, 0, 1]
+  type: integer
+a_restricted_string:
+  allowed: [agent, client, vendor]
+  type: string
+a_set: {type: set}
+an_array:
+  allowed: [agent, client, vendor]
+  type: list
+an_integer: {max: 100, min: 1, type: integer}

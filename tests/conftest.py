@@ -127,6 +127,22 @@ def json_schema_file(json_schema_filename):
     return open(json_schema_filename)
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def json_schema_string(json_schema_file):
     return json_schema_file.read()
+
+
+@pytest.fixture(scope='session')
+def yaml_schema_filename():
+    return str(
+        Path(__file__).parent.joinpath('fixtures', 'schema.yaml').absolute())
+
+
+@pytest.fixture()
+def yaml_schema_file(yaml_schema_filename):
+    return open(yaml_schema_filename)
+
+
+@pytest.fixture()
+def yaml_schema_string(yaml_schema_file):
+    return yaml_schema_file.read()

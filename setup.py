@@ -36,6 +36,9 @@ setup(
     version='0.1dev',
     packages=find_packages(),
     install_requires=install_requires,
+    extras_require={
+        'YaML': ["PyYAML"],
+    },
     tests_require=[
         'pytest',
         'tox',
